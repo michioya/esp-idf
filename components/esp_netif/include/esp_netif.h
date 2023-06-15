@@ -160,6 +160,9 @@ esp_err_t esp_netif_attach(esp_netif_t *esp_netif, esp_netif_iodriver_handle dri
  */
 esp_err_t esp_netif_receive(esp_netif_t *esp_netif, void *buffer, size_t len, void *eb);
 
+// for SPE.
+extern esp_err_t (*spe_transmit)(void *h, void *buffer, size_t len);
+
 /**
  * @}
  */
