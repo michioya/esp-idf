@@ -871,9 +871,12 @@ void esp_netif_free_rx_buffer(void *h, void* buffer)
     esp_netif->driver_free_rx_buffer(esp_netif->driver_handle, buffer);
 }
 
+esp_err_t (*spe_transmit)(void *h, void *buffer, size_t len);
+
 esp_err_t esp_netif_transmit(esp_netif_t *esp_netif, void* data, size_t len)
 {
-    return (esp_netif->driver_transmit)(esp_netif->driver_handle, data, len);
+    //return (esp_netif->driver_transmit)(esp_netif->driver_handle, data, len);
+    return spe_transmit(esp_netif->driver_handle, data, len);
 }
 
 esp_err_t esp_netif_transmit_wrap(esp_netif_t *esp_netif, void *data, size_t len, void *pbuf)
