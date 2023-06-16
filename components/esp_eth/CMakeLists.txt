@@ -4,8 +4,8 @@ set(srcs)
 set(include)
 set(priv_requires)
 
-CONFIG_ETH_ENABLED=y
-CONFIG_ETH_USE_ESP32_EMAC=y
+set(CONFIG_ETH_ENABLED ON)
+set(CONFIG_ETH_USE_ESP32_EMAC ON)
 
 # If Ethernet disabled in Kconfig, this is a config-only component
 if(CONFIG_ETH_ENABLED)
