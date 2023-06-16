@@ -28,7 +28,7 @@
 #include "sdkconfig.h"
 #include "esp_rom_gpio.h"
 #include "esp_rom_sys.h"
-#include "hal/emac_ll.h"
+// #include "hal/emac_ll.h"
 
 static const char *TAG = "esp.emac";
 
