@@ -10,7 +10,7 @@ set(CONFIG_ETH_USE_ESP32_EMAC ON)
 # If Ethernet disabled in Kconfig, this is a config-only component
 if(CONFIG_ETH_ENABLED)
     set(srcs "src/esp_eth.c" "src/esp_eth_phy.c")
-    set(include "include" "../hal/include")
+    set(include "include" "../hal/include" "../soc/esp32/include")
     set(priv_requires "driver" "log" "esp_timer") # require "driver" for using some GPIO APIs
 
     if(NOT CMAKE_BUILD_EARLY_EXPANSION)
