@@ -20,11 +20,11 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/semphr.h"
-#include "hal/cpu_hal.h"
-#include "hal/emac_hal.h"
-#include "hal/gpio_hal.h"
-#include "soc/soc.h"
-#include "soc/rtc.h"
+// #include "hal/cpu_hal.h"
+// #include "hal/emac_hal.h"
+// #include "hal/gpio_hal.h"
+// #include "soc/soc.h"
+// #include "soc/rtc.h"
 #include "sdkconfig.h"
 #include "esp_rom_gpio.h"
 #include "esp_rom_sys.h"
@@ -393,7 +393,7 @@ static esp_err_t emac_esp32_start(esp_eth_mac_t *mac)
 
 static esp_err_t emac_esp32_stop(esp_eth_mac_t *mac)
 {
-    emac_esp32_t *emac = __containerof(mac, emac_esp32_t, parent);
+    // emac_esp32_t *emac = __containerof(mac, emac_esp32_t, parent);
     esp_err_t ret = ESP_OK;
     // int32_t to = 0;
     // do {

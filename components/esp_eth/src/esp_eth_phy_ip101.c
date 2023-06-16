@@ -394,12 +394,12 @@ static esp_err_t ip101_init(esp_eth_phy_t *phy)
 
 static esp_err_t ip101_deinit(esp_eth_phy_t *phy)
 {
-    esp_err_t ret = ESP_OK;
+    // esp_err_t ret = ESP_OK;
     // /* Power off Ethernet PHY */
     // ESP_GOTO_ON_ERROR(ip101_pwrctl(phy, false), err, TAG, "power control failed");
     return ESP_OK;
-err:
-    return ret;
+// err:
+//     return ret;
 }
 
 esp_eth_phy_t *esp_eth_phy_new_ip101(const eth_phy_config_t *config)
