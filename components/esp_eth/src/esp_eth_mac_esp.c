@@ -20,15 +20,15 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/semphr.h"
-// #include "hal/cpu_hal.h"
-// #include "hal/emac_hal.h"
-// #include "hal/gpio_hal.h"
-// #include "soc/soc.h"
-// #include "soc/rtc.h"
+#include "hal/cpu_hal.h"
+#include "hal/emac_hal.h"
+#include "hal/gpio_hal.h"
+#include "soc/soc.h"
+#include "soc/rtc.h"
 #include "sdkconfig.h"
 #include "esp_rom_gpio.h"
 #include "esp_rom_sys.h"
-// #include "hal/emac_ll.h"
+#include "hal/emac_ll.h"
 
 static const char *TAG = "esp.emac";
 
