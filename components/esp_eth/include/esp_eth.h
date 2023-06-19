@@ -17,6 +17,10 @@
 #include "esp_eth_mac.h"
 #include "esp_eth_phy.h"
 
+#define CONFIG_ETH_DMA_BUFFER_SIZE 512
+#define CONFIG_ETH_DMA_RX_BUFFER_NUM 10
+#define CONFIG_ETH_DMA_TX_BUFFER_NUM 10
+
 #ifdef __cplusplus
 extern "C" {
 #endif
