@@ -26,6 +26,11 @@
 #include "esp_eth_netif_glue.h"
 #endif
 
+
+#define CONFIG_ETH_DMA_BUFFER_SIZE 512
+#define CONFIG_ETH_DMA_RX_BUFFER_NUM 10
+#define CONFIG_ETH_DMA_TX_BUFFER_NUM 10
+
 //
 // Note: tcpip_adapter legacy API has to be included by default to provide full compatibility
 //  for applications that used tcpip_adapter API without explicit inclusion of tcpip_adapter.h
