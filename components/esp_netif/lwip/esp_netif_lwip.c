@@ -77,6 +77,8 @@ do {                                                                            
     action;                                                                                     \
 } while(0)
 
+esp_err_t (*spe_transmit)(void*, void *, size_t);
+
 //
 //  Internal types
 //
