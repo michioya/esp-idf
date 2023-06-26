@@ -579,6 +579,12 @@ esp_netif_t *esp_netif_new(const esp_netif_config_t *esp_netif_config)
     return esp_netif;
 }
 
+esp_netif_t *esp_netif_new_for_spe(const esp_netif_config_t *esp_netif_config, esp_err_t (*spe_transmit)(void *h, void *buffer, size_t len)) {
+    esp_netif_t * eth_netif = esp_netif_new(esp_netif_config);
+    eth_netif->driver_transmit = spe_transmit;
+    return eth_netif;
+}
+
 static void esp_netif_lwip_remove(esp_netif_t *esp_netif)
 {
     if (esp_netif->lwip_netif) {

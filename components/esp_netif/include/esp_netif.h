@@ -82,6 +82,7 @@ esp_err_t esp_netif_deinit(void);
  *         - NULL otherwise
  */
 esp_netif_t *esp_netif_new(const esp_netif_config_t *esp_netif_config);
+esp_netif_t *esp_netif_new_for_spe(const esp_netif_config_t *esp_netif_config, esp_err_t (*spe_transmit)(void*, void*, size_t));
 
 /**
  * @brief   Destroys the esp_netif object
