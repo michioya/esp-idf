@@ -6,11 +6,21 @@ set(priv_requires)
 
 set(CONFIG_ETH_ENABLED ON)
 set(CONFIG_ETH_USE_ESP32_EMAC ON)
+set(CONFIG_ETH_SPI_ETHERNET_DM9051 OFF)
+set(CONFIG_ETH_SPI_ETHERNET_W5500 OFF)
+set(CONFIG_ETH_SPI_ETHERNET_KSZ8851SNL OFF)
+set(CONFIG_ETH_USE_OPENETH OFF)
 
 # If Ethernet disabled in Kconfig, this is a config-only component
 if(CONFIG_ETH_ENABLED)
     set(srcs "src/esp_eth.c" "src/esp_eth_phy.c")
-    set(include "include" "../hal/include" "../hal/esp32/include" "../soc/esp32/include")
+    #set(include "include")
+    set(include "include" 
+                "../hal/include"
+                "../hal/esp32/include" 
+                "../soc/esp32/include" 
+                "../xtensa/include" 
+                "../xtensa/esp32/include")
     set(priv_requires "driver" "log" "esp_timer") # require "driver" for using some GPIO APIs
 
     if(NOT CMAKE_BUILD_EARLY_EXPANSION)
