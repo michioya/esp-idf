@@ -6,7 +6,10 @@ set(priv_requires)
 
 set(CONFIG_ETH_ENABLED ON)
 set(CONFIG_ETH_USE_ESP32_EMAC ON)
+set(CONFIG_ETH_SPI_ETHERNET_DM9051 OFF)
 set(CONFIG_ETH_SPI_ETHERNET_W5500 OFF)
+set(CONFIG_ETH_SPI_ETHERNET_KSZ8851SNL OFF)
+set(CONFIG_ETH_USE_OPENETH OFF)
 
 # If Ethernet disabled in Kconfig, this is a config-only component
 if(CONFIG_ETH_ENABLED)
